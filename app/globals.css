@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+@theme {
+  --animate-glow-indigo: glow-indigo 2.6s ease-in-out infinite;
+  --animate-glow-amber: glow-amber 2.6s ease-in-out infinite;
+
+  @keyframes glow-indigo {
+    0%,
+    100% {
+      box-shadow:
+        0 0 18px -2px rgb(79 70 229 / 0.45),
+        0 12px 28px -12px rgb(79 70 229 / 0.7);
+    }
+    50% {
+      box-shadow:
+        0 0 38px 4px rgb(99 102 241 / 0.6),
+        0 12px 36px -10px rgb(79 70 229 / 0.8);
+    }
+  }
+
+  @keyframes glow-amber {
+    0%,
+    100% {
+      box-shadow:
+        0 0 14px -2px rgb(245 158 11 / 0.45),
+        0 8px 22px -10px rgb(217 119 6 / 0.6);
+    }
+    50% {
+      box-shadow:
+        0 0 30px 4px rgb(251 191 36 / 0.65),
+        0 8px 28px -8px rgb(217 119 6 / 0.7);
+    }
+  }
+}
+
+html {
+  color-scheme: light;
+}
+
+body {
+  background: #ffffff;
+}
